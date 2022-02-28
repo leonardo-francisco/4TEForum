@@ -19,9 +19,7 @@
     <div class="row" id="postIndexContent">
         <div class="col-md-3 postAuthorContainer">
             <div class="postAuthorImage" style="background-image: url(@Model.AuthorImageUrl);"></div>
-            <a asp-controller="Profile" asp-action="Detail" asp-route-id="@Model.AuthorId">
-                @Model.AuthorName
-            </a>
+            @Model.AuthorName
             <span class="postData">@Model.Created</span>
             @if (Model.IsAuthorAdmin)
             {
@@ -61,9 +59,7 @@
             <div class="row replyContent">
                 <div class="col-md-3 replyAuthorContainer">
                     <div class="postAuthorImage" style="background-image: url(@reply.AuthorImageUrl)"></div>
-                    <a asp-controller="Profile" asp-action="Detail" asp-route-id="@reply.AuthorId" class="btn btn-newReply">
-                        @reply.AuthorName
-                    </a>
+                    @reply.AuthorName
                     @if (reply.IsAuthorAdmin)
                     {
                         <div class="isAdmin smaller">Admin</div>
